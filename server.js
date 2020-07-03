@@ -23,7 +23,7 @@ const db = knex({
 const signinLimiter = rateLimit({
   windowMs: 1 * 60 * 1000,
   max: 5,
-  message: JSON.stringify("Tentativi esauriti, riprova tra 1 minuto.")
+  message: JSON.stringify("Too many log-in attempts, retry in 1 minute")
 });
 
 const app = express();
